@@ -1,3 +1,30 @@
+$text-color: #000;
+
 .header {
   display: flex;
+  font-family: "Roboto Mono", sans-serif;
+  justify-content: space-between;
+}
+
+.navlink {
+  display: flex;
+  margin-top: 20px;
+}
+
+.navlink li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.navlink a {
+  color: $text-color;
+  padding-bottom: 10px;
+  text-decoration: none;
+}
+
+.navlink a:hover {
+}
+
+.active {
+  border-bottom: 2px solid #000;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/dumbbell.jpg';
+import logo from '../images/vaporwave.png';
 import './icon.scss';
 
 const Icon = () => {

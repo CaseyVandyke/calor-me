@@ -1,36 +1,45 @@
 import React, {} from 'react';
-import { BrowserRouter, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import Icon from './Icon';
 import Search from './Search';
+import './navbar.scss';
 
 const Header = () => {
 
     return (
-        <header className="header">
-            <Search />
-            <Icon />
-            <BrowserRouter>
-                <ul>
-                    <li>
-                        <NavLink exact activeClassName="active" to="/">
-                        Home
-                        </NavLink>
-                        <NavLink exact activeClassName="active" to="/">
-                        About
-                        </NavLink>
-                        <NavLink exact activeClassName="active" to="/">
-                        Contact
-                        </NavLink>
-                        <NavLink exact activeClassName="active" to="/">
-                        Get Started
-                        </NavLink>
-                        <NavLink exact activeClassName="active" to="/">
-                        Sign In
-                        </NavLink>
-                    </li>
-                </ul>
-            </BrowserRouter>
-        </header>
+        <Router>
+            <header className="header">
+                <Search />
+                <Icon />
+                    <ul className="navlink">
+                        <li>
+                            <NavLink exact activeClassName="active" to="/">
+                            Home
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName="active" to="/about">
+                            About
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName="active" to="/contact">
+                            Contact
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName="active" to="/start">
+                            Get Started
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink activeClassName="active" to="/login">
+                            Sign In
+                            </NavLink>
+                        </li>
+                    </ul>
+            </header>
+        </Router>
     )
 }
 

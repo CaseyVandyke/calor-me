@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './search.scss';
 
 const Search = () => {
 
@@ -10,7 +11,7 @@ const Search = () => {
     }
 
     return (
-        <form action="#" onSubmit={handleSubmit}>
+        <form className="search-container" action="#" onSubmit={handleSubmit}>
             <label>
                 Search Bar
                 <input type="text" value={search} onChange={e => setSearch(e.target.value)}/>
