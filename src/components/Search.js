@@ -12,10 +12,8 @@ const Search = () => {
 
     return (
         <form className="search-container" action="#" onSubmit={handleSubmit}>
-            <label>
-                Search Bar
+            <i class="fas fa-search"></i>
                 <input type="text" value={search} onChange={e => setSearch(e.target.value)}/>
-            </label>
             <button>Search</button>
         </form>
     )

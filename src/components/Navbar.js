@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import Icon from './Icon';
 import Search from './Search';
@@ -9,7 +9,6 @@ const Header = () => {
     return (
         <Router>
             <header className="header">
-                <Search />
                 <Icon />
                     <ul className="navlink">
                         <li>
