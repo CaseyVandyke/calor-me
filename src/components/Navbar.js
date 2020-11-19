@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, NavLink } from 'react-router-dom'
 import Icon from './Icon';
 import Search from './Search';
-import './navbar.scss';
+import '../styles/navbar.scss';
 
 const Header = () => {
 

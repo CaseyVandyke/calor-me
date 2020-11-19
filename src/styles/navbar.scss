@@ -13,22 +13,36 @@ $hover-color: #ff0000;
 }
 
 .navlink li {
+  font-size: 18px;
   list-style: none;
   margin-right: 20px;
 }
 
+.navlink li:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $hover-color;
+  transition: width 0.3s;
+}
+
+.navlink li:hover::after {
+  width: 100%;
+  //transition: width .3s;
+}
+
 .navlink a {
   color: $text-color;
-  padding-bottom: 10px;
   text-decoration: none;
 }
 
 .navlink a:hover {
-  color: #ff0000;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
+  color: $hover-color;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
 }
 
 .active {
-  border-bottom: 2px solid #ff0000;
+  border-bottom: 2px solid $hover-color;
 }

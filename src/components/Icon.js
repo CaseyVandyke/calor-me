@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../images/vaporwave.png';
-import './icon.scss';
+import '../styles/icon.scss';
 
 const Icon = () => {
 
