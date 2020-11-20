@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import Icon from './Icon';
 import Search from './Search';
 import '../styles/navbar.scss';
+import App from '../App';
+import Login from '../components/Login';
 
 const Header = () => {
 
@@ -37,6 +39,9 @@ const Header = () => {
                             </NavLink>
                         </li>
                     </ul>
+
+                    <Route exact path="/" component={App} />
+                    <Route path="/login" component={Login} />
             </header>
         </Router>
     )
