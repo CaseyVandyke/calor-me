@@ -6,9 +6,3 @@
 body {
   font-family: "Roboto Mono", sans-serif;
 }
-
-.overlay {
-  background-image: url("./images/Bull.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}

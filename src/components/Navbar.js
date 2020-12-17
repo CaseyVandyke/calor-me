@@ -40,7 +40,7 @@ const Header = () => {
                         </li>
                     </ul>
 
-                    <Route exact path="/" component={App} />
+                    <Route exact path="process.env.PUBLIC_URL" component={App} />
                     <Route path="/login" component={Login} />
             </header>
         </Router>
