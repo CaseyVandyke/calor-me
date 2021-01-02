@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
 import Icon from './Icon';
-import Search from './Search';
 import '../styles/navbar.scss';
 import App from '../App';
 import Login from '../components/Login';
 
-const Header = () => {
+const Navbar = () => {
 
     return (
         <Router>
@@ -47,4 +46,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Navbar;
