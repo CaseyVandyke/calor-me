@@ -33,7 +33,8 @@ const Login = () => {
                     type="text" id="fullname" 
                     value={fullName} 
                     placeholder="Fullname" 
-                    onChange={e => setFullName(e.target.value)}/>
+                    onChange={e => setFullName(e.target.value)}
+                    required />
                 </label>
             </div>
             <div className="form-group">
@@ -44,7 +45,8 @@ const Login = () => {
                     id="email" 
                     value={email} 
                     placeholder="E-mail" 
-                    onChange={e => setEmail(e.target.value)}/>
+                    onChange={e => setEmail(e.target.value)}
+                    required />
                 </label>
             </div>
             <div className="form-group">
@@ -55,7 +57,8 @@ const Login = () => {
                     id="username" 
                     value={userName} 
                     placeholder="Username" 
-                    onChange={e => setUserName(e.target.value)}/>
+                    onChange={e => setUserName(e.target.value)}
+                    required />
                 </label>
             </div>
             <div className="form-group">
@@ -66,7 +69,8 @@ const Login = () => {
                     id="password" 
                     value={password} 
                     placeholder="Password" 
-                    onChange={e => setPassword(e.target.value)}/>
+                    onChange={e => setPassword(e.target.value)}
+                    required />
                 </label>
             </div>
                 <button className="login-submit btn">Submit</button>

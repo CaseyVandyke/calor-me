@@ -5,16 +5,22 @@ const bcrypt = require('bcrypt');
 
 router.post('/signup', (request, response) => {
 
-const saltPassword = await bcrypt.genSalt(10);
-const securePassword = await bcrypt.hash(request.body.password, saltPassword);
+(async function () {
 
-const signUpUser = new signUpTemplateCopy({
-    fullName: request.body.fullName,
-    email: request.body.email,
-    userName: request.body.userName,
-    password: securePassword
-})
-    signUpUser.save()
+    const salt = await bcrypt.genSalt(10);
+
+    // hash the password along with our new salt
+    const hash = await bcrypt.hash(request.body.password, salt);
+    return hash;
+    })().then((data)=>{
+        const txtPassword = data;
+        const newUser = new signUpTemplateCopy({
+            fullName: request.body.fullName,
+            email: request.body.email,
+            userName: request.body.userName,
+            password: txtPassword,
+        });
+    newUser.save()
     .then(data => {
         response.json(data)
     })
@@ -22,6 +28,9 @@ const signUpUser = new signUpTemplateCopy({
         response.json(error)
     })
 })
+})
+
+
 
 
 
