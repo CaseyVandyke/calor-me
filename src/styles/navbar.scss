@@ -20,12 +20,13 @@ $hover-color: #ff0000;
 }
 
 .navlink li:after {
+  background: $hover-color;
   content: "";
   display: block;
-  width: 0;
   height: 2px;
-  background: $hover-color;
+  margin-top: -1px;
   transition: width 0.3s;
+  width: 0;
 }
 
 .navlink li:hover::after {

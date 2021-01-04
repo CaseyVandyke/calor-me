@@ -20,48 +20,56 @@ const Login = () => {
 
         axios.post('http://localhost:4000/app/signup', registered)
             .then(response => console.log(response.data));
-        window.location = '/';
+            window.location = '/';
 
     }
 
     return (
         <form onSubmit={handleSubmit} action="#" className="auth-container">
+            <div className="form-group">
                 <label htmlFor="fullName">
                     <input 
-                    className="fullname" 
+                    className="fullname form-control form-control-lg" 
                     type="text" id="fullname" 
                     value={fullName} 
                     placeholder="Fullname" 
                     onChange={e => setFullName(e.target.value)}/>
                 </label>
+            </div>
+            <div className="form-group">
                 <label htmlFor="email">
                     <input 
-                    className="email" 
+                    className="email form-control form-control-lg" 
                     type="text" 
                     id="email" 
                     value={email} 
                     placeholder="E-mail" 
                     onChange={e => setEmail(e.target.value)}/>
                 </label>
+            </div>
+            <div className="form-group">
                 <label htmlFor="userName">
                     <input 
-                    className="username" 
+                    className="username form-control form-control-lg" 
                     type="text" 
                     id="username" 
                     value={userName} 
                     placeholder="Username" 
                     onChange={e => setUserName(e.target.value)}/>
                 </label>
+            </div>
+            <div className="form-group">
                 <label htmlFor="password">
                     <input 
-                    className="password" 
+                    className="password form-control form-control-lg" 
                     type="password" 
                     id="password" 
                     value={password} 
                     placeholder="Password" 
                     onChange={e => setPassword(e.target.value)}/>
                 </label>
-                <button className="login-submit">Submit</button>
+            </div>
+                <button className="login-submit btn">Submit</button>
         </form>
     )
 }

@@ -24,7 +24,7 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink activeClassName="active" to="/start">
+                        <NavLink activeClassName="active" to="/signin">
                         Get Started
                         </NavLink>
                     </li>

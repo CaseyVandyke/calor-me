@@ -1,6 +1,13 @@
+$text-color: #000;
+$hover-color: #ff0000;
+
 .auth-container {
   max-width: 540px;
   margin: 0 auto;
+}
+
+.form-group {
+  text-align: center;
 }
 
 .fullname,
@@ -9,13 +16,29 @@
 .password,
 .login-submit {
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
   padding: 10px;
-  width: 180px;
+  width: 300px;
+}
+
+.fullname {
+  margin-top: 20%;
 }
 
 .login-submit {
-    cursor: pointer;
+  background-color: $hover-color;
+  border: 2px solid $hover-color;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
 }
 
-
+.login-submit:hover {
+  background-color: $hover-color;
+  color: #fff;
+  opacity: 0.6;
+  -webkit-transition: all 0.4 ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
