@@ -9,6 +9,17 @@ $hover-color: #ff0000;
   margin: 0 auto;
 }
 
+.icon {
+  margin-left: 20px;
+  width: 75px;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .navlink {
   display: flex;
   margin-top: 20px;
@@ -38,12 +49,6 @@ $hover-color: #ff0000;
 .navlink a {
   color: $text-color;
   text-decoration: none;
-}
-
-.navlink a:hover {
-  color: $hover-color;
-  transition: 0.4s ease;
-  -webkit-transition: 0.4s ease;
 }
 
 .active {

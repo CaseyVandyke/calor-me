@@ -1,5 +1,5 @@
 import logo from '../images/vaporwave.png';
-import '../styles/icon.scss';
+import '../styles/navbar.scss';
 
 const Icon = () => {
 
