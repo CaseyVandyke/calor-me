@@ -9,14 +9,24 @@ const passport = require('passport');
 const passportLocal = require('passport-local').Strategy;
 
 const app = express();
-const routePath = require('./routes/routes');
-
+const routePath = require('./routers/registerRouter');
+const loginPath = require('./routers/loginRouter')
 dotenv.config()
 
-mongoose.connect(process.env.DATABASE_ACCESS, () => console.log("Database connected"));
+mongoose.connect(process.env.DATABASE_ACCESS, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+},
+    () => {
+        console.log('mongoose is connected');
+    });
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({
+    origin: "http://localhost:3000", // >-- location of the react app were connecting to
+    credentials: true
+}));
 
 app.use(session({
     secret: "secretcode",
@@ -24,12 +34,13 @@ app.use(session({
     saveUninitialized: true
 }))
 
-app.use(cookieParser("secretcode"))
-
-app.use(cors({
-    origin: "http://localhost:3000", // >-- location of the react app were connecting to
-    credentials: true
-}));
+app.use(cookieParser("secretcode"));
+app.use(passport.initialize());
+app.use(passport.session());
+require('./auth/passportConfig')(passport);
 
 app.use('/app', routePath);
+app.use('/app', loginPath);
 app.listen(4000, () => console.log("server is up and running"));
+
+module.exports = app;
