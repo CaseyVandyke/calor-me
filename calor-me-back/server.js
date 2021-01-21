@@ -6,11 +6,16 @@ const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
-const passportLocal = require('passport-local').Strategy;
 
 const app = express();
-const routePath = require('./routers/registerRouter');
-const loginPath = require('./routers/loginRouter')
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({
+    origin: "http://localhost:3000", // >-- location of the react app were connecting to
+    credentials: true
+}));
+
 dotenv.config()
 
 mongoose.connect(process.env.DATABASE_ACCESS, {
@@ -39,8 +44,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./auth/passportConfig')(passport);
 
-app.use('/app', routePath);
-app.use('/app', loginPath);
+// Routes
+app.use('/users', require('./routes/users'))
+
 app.listen(4000, () => console.log("server is up and running"));
 
 module.exports = app;
