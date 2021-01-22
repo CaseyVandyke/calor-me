@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Banner from './components/Banner';
 import Login from './components/Login';
-import  Navbar  from './components/Navbar';
+import Navbar from './components/Navbar';
 import Register from './components/Register';
 import './App.scss';
 
@@ -8,9 +9,11 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Route exact path="/login" component={Login}/>
-      <Route path="/register"  component={Register} />
+      <Route exact path="/" component={Banner} />
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
     </Router>
+
   );
 }
 

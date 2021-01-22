@@ -7,33 +7,33 @@ const Navbar = () => {
     return (
         <header className="header">
             <Icon />
-                <ul className="navlink">
-                    <li>
-                        <NavLink exact activeClassName="active" to="/">
+            <ul className="navlink">
+                <li>
+                    <NavLink exact activeClassName="active" to="/">
                         Home
                         </NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName="active" to="/about">
+                </li>
+                <li>
+                    <NavLink activeClassName="active" to="/about">
                         About
                         </NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName="active" to="/contact">
+                </li>
+                <li>
+                    <NavLink activeClassName="active" to="/contact">
                         Contact
                         </NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName="active" to="/register">
-                        Get Started
+                </li>
+                <li>
+                    <NavLink activeClassName="active" to="/register">
+                        Register
                         </NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName="active" to="/login">
-                        Sign In
+                </li>
+                <li>
+                    <NavLink activeClassName="active" to="/login">
+                        Login
                         </NavLink>
-                    </li>
-                </ul>
+                </li>
+            </ul>
         </header>
     )
 }
