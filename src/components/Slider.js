@@ -1,4 +1,6 @@
 import { SlideData } from './SlideData';
+import '../styles/banner.scss';
+
 
 const Slider = () => {
     return (
