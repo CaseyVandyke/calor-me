@@ -5,7 +5,7 @@ const Icon = () => {
 
     return (
         <div className="icon-container">
-            <img src={logo} className="icon" alt="dumbbell"/>
+            <img src={logo} className="icon" alt="dumbbell" />
         </div>
     )
 }
