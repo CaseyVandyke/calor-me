@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import About from './components/About';
 import Banner from './components/Banner';
 import Login from './components/Login';
 import Navbar from './components/Navbar';
@@ -10,6 +11,7 @@ function App() {
     <Router>
       <Navbar />
       <Route exact path="/" component={Banner} />
+      <Route path="/About" component={About} />
       <Route path="/login" component={Login} />
       <Route path="/register" component={Register} />
     </Router>

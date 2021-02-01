@@ -1,0 +1,14 @@
+$hover-color: #ff0000;
+
+.about-container {
+    max-width: 720px;
+    margin: 60px auto;
+}
+
+.about-header {
+    color: $hover-color;
+}
+
+.about-content {
+    line-height: 1.5;
+}

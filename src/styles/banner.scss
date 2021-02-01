@@ -1,12 +1,21 @@
 .banner-container {
-    margin: 50px 0 0 70px;
     display: flex;
+    max-width: 1180px;
+    margin: 0 auto;
 }
 
 .banner-heading {
     font-size: 84px;
     font-weight: 900;
     text-transform: uppercase;
+}
+
+.right-arrow {
+    
+}
+
+.left-arrow {
+    
 }
 
 .left-side {
@@ -16,7 +25,7 @@
 }
 
 .slide {
-    width: 440px;
-    height: 440px;
+    border-radius: 3px;
     object-fit: cover;
+    margin-top: 20px;
 }
